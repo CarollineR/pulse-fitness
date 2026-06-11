@@ -287,6 +287,7 @@ body {
 /*Estrutura*/
 .estrutura {
     padding: 8rem 8%;
+    background: #0D1219;
 }
 
 .estrutura-content {
@@ -373,6 +374,7 @@ body {
 /*Modalidades*/
 .modalidades {
     padding: 8rem 8%;
+    background: #0D1219;
 }
 
 .modalidades-content {
@@ -424,6 +426,7 @@ body {
 /*Plano*/
 .planos {
     padding: 8rem 8%;
+    background: #0D1219;
 }
 
 .planos-content {
@@ -511,6 +514,7 @@ body {
 /*Depoimentos*/
 .depoimentos {
     padding: 8rem 8%;
+    background: #0D1219;
 }
 
 .depoimentos-content {
@@ -558,8 +562,8 @@ body {
 /*Contato*/
 .contato {
     padding: 8rem 8%;
-    background: linear-gradient(180deg, var(--bg) 0%, #0D1219 100%);
     position: relative;
+    background: linear-gradient(180deg, #0D1219 0%, #0B1016 40%, var(--bg) 100%);
 }
 
 .contato::before {
@@ -630,9 +634,9 @@ body {
 
 /*Footer*/
 .footer {
-    padding: 4rem 8% 2rem;
-    background: #0D1219;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 8% 2rem;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .footer-content {

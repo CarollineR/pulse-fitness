@@ -28,10 +28,26 @@ body {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
     color: var(--white);
+    gap: 0.75rem;
 }
+
+.nav-logo svg {
+    width: 24px;
+    height: 24px;
+    color: var(--blue);
+}
+
+.logo-pulse {
+    color: var(--blue);
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -41,11 +57,30 @@ body {
 .nav-links a {
     color: var(--white);
     text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    position: relative;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: var(--blue-light);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--blue);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /*Sections*/

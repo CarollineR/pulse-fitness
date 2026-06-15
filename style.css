@@ -15,7 +15,7 @@
 body {
     background: var(--bg);
     color: var(--white);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /*Navbar*/
@@ -127,6 +127,15 @@ body {
     z-index: 2;
 }
 
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+
 .hero-info {
     max-width: 600px;
     position: relative;
@@ -155,13 +164,13 @@ body {
     inset: 0;
     background: linear-gradient(
         to right,
-        #0A0E13 30%,
-        rgba(10, 14, 19, 0.5) 60%,
+        #0A0E13 25%,
+        rgba(10, 14, 19, 0.88) 50%,
+        rgba(10, 14, 19, 0.35) 75%,
         transparent 100%
     );
     z-index: 2;
 }
-
 
 .hero-content::before {
     content: "";
@@ -521,13 +530,6 @@ body {
     letter-spacing: 1px;
 }
 
-.plano-preco {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 1.5rem 0;
-    color: var(--white);
-}
-
 .plano-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -543,15 +545,18 @@ body {
     padding: 1rem;
     border-radius: 12px;
     text-decoration: none;
-    font-weight: 600px;
+    font-weight: 600;
     transition: all .3s ease;
 }
 
-.plano-card:hover,
-.plano-card a:hover {
+.plano-card:hover {
     transform: translateY(-3px);
     border-color: rgba(96, 165, 250, .18);
     box-shadow: 0 15px 35px rgba(96, 165, 250, .15);
+}
+
+.plano-card a:hover {
+    transform: translateY(-3px);
 }
 
 .plano-card ul {
@@ -574,15 +579,6 @@ body {
     font-size: 1.2rem;
     color: var(--gray);
     margin: 2rem 0;
-}
-
-.plano-card .btn-secondary {
-    transition: all 0.3s ease;
-}
-
-.plano-card .btn-secondary:hover {
-    transform: translate(-3px);
-    border-color: rgba(96, 165, 250, .4);
 }
 
 /*Depoimentos*/
@@ -664,7 +660,7 @@ body {
     content: "";
     position: absolute;
     inset: -40px;
-    background: radial-gradient(circle at center), rgba(61, 123, 247, 0.08), transparent 60%;
+    background: radial-gradient(circle at center, rgba(61, 123, 247, 0.08), transparent 60%);
     z-index: -1;
 }
 
@@ -744,9 +740,10 @@ body {
 }
 
 .footer-contato a {
+    display: block;
+    padding: .5rem 0;
     text-decoration: none;
     color: var(--blue-light);
-    transition: all .3s ease;
 }
 
 .footer-contato a:hover {
@@ -784,14 +781,75 @@ body {
 }
 
 /*Responsividade*/
+/*Desktop*/
+.nav-links {
+    display: flex;
+}
+
+.menu-toggle {
+    display: none;
+}
+
 /*Tablet*/
 @media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        background: rgba(10, 14, 19, 0.98);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(255, 255, 255, .08);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar {
+        position: relative;
+    } 
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 4rem 32px;
+    }
+
+    .hero-content {
+        min-height: auto;
+    }
+
+
+    .hero-info {
+        max-width: 100%;
+        margin-top: 0;
+    }
+
     .hero-slogan {
         font-size: 3rem;
     }
 
+    .hero-image {
+        left: 0;
+    }
+
     .hero-content::before {
         display: none;
+    }
+
+    .estrutura-main-info {
+    max-width: 340px;
     }
 
     .features-grid, .estrutura-cards,
@@ -801,62 +859,82 @@ body {
     }
 
     .footer-content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
+
 /*Mobile*/
 @media (max-width: 768px) {
+    .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
     .hero {
-        min-height: auto;
-        height: auto;
-        padding: 4rem 8%;
-    }
-
-    .hero-image {
-        position: relative;
-        left: 0;
-        margin-top: 2rem;
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-info {
-        margin-top: 0;
+    min-height: auto;
+    height: auto;
+    padding: 5rem 32px;
+    overflow: hidden;
     }
 
     .hero-slogan {
-        font-size: 2.5rem;
+    font-size: 2.4rem;
     }
 
     .hero-buttons {
-        flex-direction: column;
+    flex-direction: column;
+    }
+
+    .hero-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 14, 19, 0.15),
+        rgba(10, 14, 19, 0.75),
+        rgba(10, 14, 19, 0.95)
+    );
+
+    z-index: 1;
+    pointer-events: none;
+    }
+
+    .hero-content::before {
+    display: none;
+    content: none;
+    opacity: 0;
+}
+
+    .hero-info {
+    margin-top: 0;
+    }
+
+    .hero-buttons {
+    flex-direction: column;
     }
 
     .hero-buttons a {
-        text-align: center;
+    text-align: center;
     }
 
     .hero-stats {
-        flex-direction: column;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
     }
 
     .features-grid, .estrutura-cards,
@@ -866,9 +944,29 @@ body {
     }
 
     .estrutura-main-info {
-        position: static;
-        max-width: 100%;
-        margin-top: 1rem;
+    left: 0.5rem;
+    bottom: 1rem;
+    right: auto;
+    max-width: 150px;
+    padding: .5rem;
+    }
+
+    .estrutura-main img {
+        height: 400px;
+    }
+
+    .estrutura-main-info h3 {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    }
+
+    .estrutura-main-info p {
+    font-size: .75rem;
+    line-height: 1.25;
+    }
+
+    .plano-card {
+        text-align: center;
     }
 
     .plano-badge {
@@ -878,7 +976,7 @@ body {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .footer {
@@ -890,6 +988,7 @@ body {
     }
 
 }
+
 
 
 

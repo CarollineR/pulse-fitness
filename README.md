@@ -1,4 +1,4 @@
-🏋️ Pulse Fitness
+### Pulse Fitness 🏋️
 
 https://carolliner.github.io/pulse-fitness/
 

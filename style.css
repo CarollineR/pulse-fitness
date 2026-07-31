@@ -925,7 +925,13 @@ body {
     .stat-card {
         padding: 0.8rem 1.2rem;
     }
+
+    .hero-content::before {
+        display: none;
+    }
+
 }
+
 
 /*Mobile*/
 @media (max-width: 768px) {

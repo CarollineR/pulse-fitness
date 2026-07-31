@@ -1,10 +1,13 @@
 # Pulse Fitness 🏋️
 
+## Preview
+
+## Acesse o projeto:
 https://carolliner.github.io/pulse-fitness/
 
-## Sobre o projeto
+## Sobre
 
-Landing page fictícia de academia desenvolvida como projeto de portfólio front-end.
+Site institucional para uma academia fictícia desenvolvida como projeto de portfólio front-end.
 Mas ela não nasceu como um site pronto — foi construída em etapas: desde a projeção da ideia, evolução visual gradual da interface,
 ajustes constantes de UI/UX, até o deploy final no GitHub Pages.
 O projeto representa um processo real de desenvolvimento: construção, revisão, refinamento e tomada de decisão em tempo de execução.
@@ -41,7 +44,12 @@ Smartphones
 Tablets
 Desktops
 
-A Pulse Fitness não é apenas uma landing page.
+## Conclusão
 
-Ela representa um processo completo de desenvolvimento front-end: da ideia inicial ao refinamento visual, passando por decisões técnicas, ajustes de interface
-e um momento real de risco que reforçou boas práticas de engenharia de software.
+A Pulse Fitness representa meu processo de evolução no desenvolvimento front-end: 
+da criação inicial da interface até os ajustes finais de responsividade, organização visual e boas práticas de versionamento.
+
+## Aviso
+
+Este é um projeto fictício desenvolvido para fins educacionais e demonstração de habilidades em desenvolvimento front-end. 
+A identidade visual, o nome da marca e conteúdos apresentados foram criados exclusivamente para este propósito, sem qualquer intenção de representar ou possuir associação com empresas, produtos ou serviços reais.

@@ -914,6 +914,10 @@ body {
         margin: 1rem 0;
     }
 
+    .hero-image img {
+        object-position: center top;
+    }
+
     .hero-text {
         margin-bottom: 1rem;
     }

@@ -118,7 +118,6 @@ body {
 /*Hero*/
 .hero {
     min-height: calc(100vh - 80px);
-    height: calc(100vh - 80px);
     display: flex;
     align-items: stretch;
     padding: 2rem 8%;

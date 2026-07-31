@@ -118,10 +118,11 @@ body {
 /*Hero*/
 .hero {
     min-height: calc(100vh - 80px);
+    height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     padding: 2rem 8%;
-    padding-top: 4rem;
+    padding-top: 3rem;
     position: relative;
 }
 
@@ -145,7 +146,7 @@ body {
     max-width: 600px;
     position: relative;
     z-index: 2;
-    margin-top: 6rem;
+    margin-top: 1.5rem;
 }
 
 .hero-image {
@@ -858,6 +859,7 @@ body {
         min-height: auto;
         height: auto;
         padding: 4rem 32px;
+        padding: 6rem;
     }
 
     .hero-content {
@@ -866,7 +868,7 @@ body {
 
     .hero-info {
         max-width: 100%;
-        margin-top: 0;
+        margin-top: 2rem;
     }
 
     .hero-slogan {
@@ -897,26 +899,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    /* Feedback para dispositivos touch (avaliar posteriormente)
-
-    .hero-buttons a:active,
-    .plano-card a:active,
-    .contato-buttons a:active {
-        transform: scale(0.97);
-    }
-
-    .plano-card:active {
-        transform: translateY(-2px);
-        border-color: rgba(96, 165, 250, .18);
-        box-shadow: 0 15px 35px rgba(96, 165, 250, .15);
-    }
-
-    .footer-contato a:active,
-    .nav-links a:active {
-        color: var(--blue-light);
-    }
-
-    */
 
 }
 
